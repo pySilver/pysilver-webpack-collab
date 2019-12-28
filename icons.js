@@ -1,6 +1,5 @@
 import { library, dom } from '@fortawesome/fontawesome-svg-core'
 
-// @see: https://fontawesome.com/how-to-use/with-the-api/other/tree-shaking
 import { faAngleDown } from '@fortawesome/pro-light-svg-icons/faAngleDown'
 import { faAngleLeft } from '@fortawesome/pro-light-svg-icons/faAngleLeft'
 import { faAngleRight } from '@fortawesome/pro-light-svg-icons/faAngleRight'
@@ -22,7 +21,6 @@ import { faThumbsUp } from '@fortawesome/pro-light-svg-icons/faThumbsUp'
 import { faUser } from '@fortawesome/pro-light-svg-icons/faUser'
 import { faUserAstronaut } from '@fortawesome/pro-light-svg-icons/faUserAstronaut'
 
-// We are only using the user-astronaut icon
 library.add(
   faAngleDown,
   faAngleLeft,
@@ -43,20 +41,7 @@ library.add(
   faThumbsDown,
   faThumbsUp,
   faUser,
-  faUserAstronaut,
+  faUserAstronaut
 )
 
-// Replace any existing <i> tags with <svg> and set up a MutationObserver to
-// continue doing this as the DOM changes.
 dom.watch()
-
-// Output:
-
-// $ encore production --progress
-// Running webpack ...
-
-// 98% after emitting SizeLimitsPlugin DONE  Compiled successfully in 519ms                                                                                                        10:10:21 PM
-
-// I  3 files written to assets/dist
-// Entrypoint theme = runtime.b6c4a98f.js 0.7eb89294.js theme.ed37ead7.js
-// ✨  Done in 1.76s.
