@@ -5,10 +5,11 @@
   "main": "icons.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build.webpack": "webpack -d --config webpack.config.js",
-    "build.encore": "",
-    "dist.webpack": "webpack -p --config webpack.config.js",
-    "dist.encore": ""
+    "clean": "rm -rf dist/* && rm -rf build/*",
+    "build.webpack": "OUT=build webpack -d --config webpack.config.js",
+    "build.encore": "encore dev --config encore.config.js",
+    "dist.webpack": "OUT=dist webpack -p --config webpack.config.js",
+    "dist.encore": "encore prod --config encore.config.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/pro-light-svg-icons": "^5.12.0",
     "@fortawesome/pro-solid-svg-icons": "^5.12.0",
+    "@symfony/webpack-encore": "^0.28.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   }
